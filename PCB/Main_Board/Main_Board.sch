@@ -1,0 +1,422 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector:USB_B_Micro J1
+U 1 1 5EC35317
+P 3750 1300
+F 0 "J1" H 3807 1767 50  0000 C CNN
+F 1 "USB_B_Micro" H 3807 1676 50  0000 C CNN
+F 2 "" H 3900 1250 50  0001 C CNN
+F 3 "~" H 3900 1250 50  0001 C CNN
+	1    3750 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 1700 3650 1750
+Wire Wire Line
+	3650 1750 3750 1750
+Wire Wire Line
+	3750 1750 3750 1700
+NoConn ~ 4050 1500
+$Comp
+L power:Earth #PWR03
+U 1 1 5EC39B6A
+P 2000 6200
+F 0 "#PWR03" H 2000 5950 50  0001 C CNN
+F 1 "Earth" H 2000 6050 50  0001 C CNN
+F 2 "" H 2000 6200 50  0001 C CNN
+F 3 "~" H 2000 6200 50  0001 C CNN
+	1    2000 6200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 6200 2000 6150
+$Comp
+L power:Earth #PWR05
+U 1 1 5EC39ED3
+P 3750 1850
+F 0 "#PWR05" H 3750 1600 50  0001 C CNN
+F 1 "Earth" H 3750 1700 50  0001 C CNN
+F 2 "" H 3750 1850 50  0001 C CNN
+F 3 "~" H 3750 1850 50  0001 C CNN
+	1    3750 1850
+	1    0    0    -1  
+$EndComp
+Connection ~ 3750 1750
+$Comp
+L power:+5V #PWR06
+U 1 1 5EC3A5B3
+P 5050 1100
+F 0 "#PWR06" H 5050 950 50  0001 C CNN
+F 1 "+5V" V 5065 1228 50  0000 L CNN
+F 2 "" H 5050 1100 50  0001 C CNN
+F 3 "" H 5050 1100 50  0001 C CNN
+	1    5050 1100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1600 2200 2000 2200
+Connection ~ 1600 2200
+Wire Wire Line
+	1600 2000 1600 2200
+Wire Wire Line
+	2000 2200 2000 2150
+Wire Wire Line
+	1200 2200 1600 2200
+Wire Wire Line
+	1200 2150 1200 2200
+Wire Wire Line
+	1200 1700 1200 1600
+Connection ~ 1200 1700
+Wire Wire Line
+	1300 1700 1200 1700
+Wire Wire Line
+	1200 1600 1300 1600
+Wire Wire Line
+	1200 1950 1200 1700
+$Comp
+L Device:CP_Small C1
+U 1 1 5EC4D992
+P 1200 2050
+F 0 "C1" V 975 2050 50  0000 C CNN
+F 1 "10uF" V 1066 2050 50  0000 C CNN
+F 2 "" H 1200 2050 50  0001 C CNN
+F 3 "~" H 1200 2050 50  0001 C CNN
+	1    1200 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Regulator_Linear:TLV75533PDBV U1
+U 1 1 5EC407F4
+P 1600 1700
+F 0 "U1" H 1600 2042 50  0000 C CNN
+F 1 "TLV75533PDBV" H 1600 1951 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:SOT-23-5" H 1600 2025 50  0001 C CIN
+F 3 "http://www.ti.com/lit/ds/symlink/tlv755p.pdf" H 1600 1750 50  0001 C CNN
+	1    1600 1700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	950  950  950  1000
+$Comp
+L power:+BATT #PWR02
+U 1 1 5EC3DEBF
+P 950 950
+F 0 "#PWR02" H 950 800 50  0001 C CNN
+F 1 "+BATT" H 965 1123 50  0000 C CNN
+F 2 "" H 950 950 50  0001 C CNN
+F 3 "" H 950 950 50  0001 C CNN
+	1    950  950 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1150 950  1150 1000
+$Comp
+L power:+5V #PWR04
+U 1 1 5EC3C991
+P 1150 950
+F 0 "#PWR04" H 1150 800 50  0001 C CNN
+F 1 "+5V" H 1165 1123 50  0000 C CNN
+F 2 "" H 1150 950 50  0001 C CNN
+F 3 "" H 1150 950 50  0001 C CNN
+	1    1150 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L Switch:SW_DPDT_x2 SW1
+U 1 1 5EC2DAE7
+P 1050 1200
+F 0 "SW1" V 1096 1012 50  0000 R CNN
+F 1 "SW_DPDT_x2" V 1005 1012 50  0000 R CNN
+F 2 "" H 1050 1200 50  0001 C CNN
+F 3 "~" H 1050 1200 50  0001 C CNN
+	1    1050 1200
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2000 1600 1900 1600
+Wire Wire Line
+	2000 1950 2000 1600
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC6FB12
+P 2350 1600
+F 0 "#PWR?" H 2350 1450 50  0001 C CNN
+F 1 "+3.3V" H 2365 1773 50  0000 C CNN
+F 2 "" H 2350 1600 50  0001 C CNN
+F 3 "" H 2350 1600 50  0001 C CNN
+	1    2350 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	1050 1400 1050 1600
+Wire Wire Line
+	1050 1600 1200 1600
+Connection ~ 1200 1600
+$Comp
+L Device:CP_Small C2
+U 1 1 5EC51E64
+P 2000 2050
+F 0 "C2" V 1775 2050 50  0000 C CNN
+F 1 "10uF" V 1866 2050 50  0000 C CNN
+F 2 "" H 2000 2050 50  0001 C CNN
+F 3 "~" H 2000 2050 50  0001 C CNN
+	1    2000 2050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:Earth #PWR01
+U 1 1 5EC5413B
+P 1200 2250
+F 0 "#PWR01" H 1200 2000 50  0001 C CNN
+F 1 "Earth" H 1200 2100 50  0001 C CNN
+F 2 "" H 1200 2250 50  0001 C CNN
+F 3 "~" H 1200 2250 50  0001 C CNN
+	1    1200 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1200 2250 1200 2200
+Connection ~ 1200 2200
+$Comp
+L RF_Module:ESP32-WROOM-32 U2
+U 1 1 5EC29F9E
+P 2000 4750
+F 0 "U2" H 2000 6331 50  0000 C CNN
+F 1 "ESP32-WROOM-32" H 2000 6240 50  0000 C CNN
+F 2 "RF_Module:ESP32-WROOM-32" H 2000 3250 50  0001 C CNN
+F 3 "https://www.espressif.com/sites/default/files/documentation/esp32-wroom-32_datasheet_en.pdf" H 1700 4800 50  0001 C CNN
+	1    2000 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR?
+U 1 1 5EC8B56E
+P 2000 2950
+F 0 "#PWR?" H 2000 2800 50  0001 C CNN
+F 1 "+3.3V" H 2015 3123 50  0000 C CNN
+F 2 "" H 2000 2950 50  0001 C CNN
+F 3 "" H 2000 2950 50  0001 C CNN
+	1    2000 2950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED_Small D?
+U 1 1 5EC8CB7F
+P 2300 1800
+F 0 "D?" H 2300 2035 50  0000 C CNN
+F 1 "LED_Small" H 2300 1944 50  0000 C CNN
+F 2 "" V 2300 1800 50  0001 C CNN
+F 3 "~" V 2300 1800 50  0001 C CNN
+	1    2300 1800
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5EC9353E
+P 2300 2050
+F 0 "R?" H 2359 2096 50  0000 L CNN
+F 1 "CUR_LIMIT" H 2359 2005 50  0000 L CNN
+F 2 "" H 2300 2050 50  0001 C CNN
+F 3 "~" H 2300 2050 50  0001 C CNN
+	1    2300 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 1600 2300 1600
+Wire Wire Line
+	2300 1600 2300 1700
+Connection ~ 2000 1600
+Wire Wire Line
+	2300 2150 2300 2200
+Wire Wire Line
+	2300 2200 2000 2200
+Connection ~ 2000 2200
+Wire Wire Line
+	2300 1900 2300 1950
+Wire Wire Line
+	2300 1600 2350 1600
+Connection ~ 2300 1600
+Wire Wire Line
+	5000 1100 5050 1100
+$Comp
+L Device:D_TVS D?
+U 1 1 5ECA6C46
+P 4200 1600
+F 0 "D?" V 4154 1679 50  0000 L CNN
+F 1 "D_TVS" V 4245 1679 50  0000 L CNN
+F 2 "" H 4200 1600 50  0001 C CNN
+F 3 "~" H 4200 1600 50  0001 C CNN
+	1    4200 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 5ECA80D7
+P 4600 1600
+F 0 "D?" V 4554 1679 50  0000 L CNN
+F 1 "D_TVS" V 4645 1679 50  0000 L CNN
+F 2 "" H 4600 1600 50  0001 C CNN
+F 3 "~" H 4600 1600 50  0001 C CNN
+	1    4600 1600
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:D_TVS D?
+U 1 1 5ECA9275
+P 5000 1600
+F 0 "D?" V 4954 1679 50  0000 L CNN
+F 1 "D_TVS" V 5045 1679 50  0000 L CNN
+F 2 "" H 5000 1600 50  0001 C CNN
+F 3 "~" H 5000 1600 50  0001 C CNN
+	1    5000 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	4200 1750 4200 1800
+Wire Wire Line
+	4200 1800 4600 1800
+Wire Wire Line
+	5000 1800 5000 1750
+Wire Wire Line
+	4600 1750 4600 1800
+Connection ~ 4600 1800
+Wire Wire Line
+	4600 1800 5000 1800
+Wire Wire Line
+	4050 1100 5000 1100
+Wire Wire Line
+	5000 1100 5000 1450
+Wire Wire Line
+	4600 1450 4600 1300
+Wire Wire Line
+	4600 1300 4050 1300
+Wire Wire Line
+	4050 1400 4200 1400
+Wire Wire Line
+	4200 1400 4200 1450
+Wire Wire Line
+	3750 1750 3750 1800
+Wire Wire Line
+	4200 1800 3750 1800
+Connection ~ 4200 1800
+Connection ~ 3750 1800
+Wire Wire Line
+	3750 1800 3750 1850
+Connection ~ 5000 1100
+$Comp
+L Device:CP_Small C3
+U 1 1 5ECBCE0A
+P 2450 3200
+F 0 "C3" H 2538 3246 50  0000 L CNN
+F 1 "22uF" H 2538 3155 50  0000 L CNN
+F 2 "" H 2450 3200 50  0001 C CNN
+F 3 "~" H 2450 3200 50  0001 C CNN
+	1    2450 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C4
+U 1 1 5ECBFADC
+P 2800 3200
+F 0 "C4" H 2892 3246 50  0000 L CNN
+F 1 "0.1uF" H 2892 3155 50  0000 L CNN
+F 2 "" H 2800 3200 50  0001 C CNN
+F 3 "~" H 2800 3200 50  0001 C CNN
+	1    2800 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 2950 2000 3050
+Wire Wire Line
+	2450 3100 2450 3050
+Wire Wire Line
+	2800 3050 2800 3100
+Wire Wire Line
+	2450 3300 2450 3350
+Wire Wire Line
+	2800 3350 2800 3300
+Wire Wire Line
+	2450 3050 2800 3050
+Wire Wire Line
+	2450 3350 2800 3350
+Wire Wire Line
+	2450 3050 2000 3050
+Connection ~ 2450 3050
+Connection ~ 2000 3050
+Wire Wire Line
+	2000 3050 2000 3350
+$Comp
+L power:Earth #PWR?
+U 1 1 5ECF72AC
+P 2850 3350
+F 0 "#PWR?" H 2850 3100 50  0001 C CNN
+F 1 "Earth" H 2850 3200 50  0001 C CNN
+F 2 "" H 2850 3350 50  0001 C CNN
+F 3 "~" H 2850 3350 50  0001 C CNN
+	1    2850 3350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	2850 3350 2800 3350
+Connection ~ 2800 3350
+$Comp
+L power:Earth #PWR?
+U 1 1 5ECF9F7B
+P 900 3550
+F 0 "#PWR?" H 900 3300 50  0001 C CNN
+F 1 "Earth" H 900 3400 50  0001 C CNN
+F 2 "" H 900 3550 50  0001 C CNN
+F 3 "~" H 900 3550 50  0001 C CNN
+	1    900  3550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:R_Small R?
+U 1 1 5ECFAABA
+P 1350 3400
+F 0 "R?" H 1291 3354 50  0000 R CNN
+F 1 "10k" H 1291 3445 50  0000 R CNN
+F 2 "" H 1350 3400 50  0001 C CNN
+F 3 "~" H 1350 3400 50  0001 C CNN
+	1    1350 3400
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5ECFB90A
+P 1050 3550
+F 0 "C?" H 1142 3596 50  0000 L CNN
+F 1 "0.1uF" H 1142 3505 50  0000 L CNN
+F 2 "" H 1050 3550 50  0001 C CNN
+F 3 "~" H 1050 3550 50  0001 C CNN
+	1    1050 3550
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	900  3550 950  3550
+Wire Wire Line
+	1150 3550 1350 3550
+Wire Wire Line
+	1350 3500 1350 3550
+Connection ~ 1350 3550
+Wire Wire Line
+	1350 3550 1400 3550
+Wire Wire Line
+	1350 3300 1350 3050
+Wire Wire Line
+	1350 3050 2000 3050
+$EndSCHEMATC
